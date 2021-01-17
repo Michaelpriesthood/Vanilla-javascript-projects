@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #333;
+  --easeOut: all 0.5s ease-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../img/background.jpg);
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Lobster Two', sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Menu Button */
+.menu-btn {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: var(--easeOut);
+  z-index: 2;
+}
+
+.btn-line {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-bottom: 5px;
+}
+
+/* Rotate Into X  */
+.menu-btn.close-menu {
+  transform: rotate(180deg);
+}
+/* Rotate Line 1 */
+.menu-btn.close-menu .btn-line:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+/* Hide Line 2 */
+.menu-btn.close-menu .btn-line:nth-child(2) {
+  opacity: 0;
+}
+/* Rotate Line 3 */
+.menu-btn.close-menu .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.8;
+  visibility: hidden;
+}
+
+.menu.show {
+  visibility: visible;
+}
+
+.menu-branding,
+.menu-nav {
+  float: left;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  height: 100vh;
+  overflow: hidden;
+  transition: var(--easeOut);
+}
+
+.menu-branding {
+  background-color: #264e94;
+  transform: translate3d(0, -100%, 0);
+}
+
+.menu-branding .branding-img {
+  width: 250px;
+  height: 250px;
+  background-image: url(../img/user.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+}
+
+.menu-nav {
+  list-style: none;
+  background: #262626;
+  transform: translate3d(0, 100%, 0);
+}
+
+.menu-nav.show,
+.menu-branding.show,
+.nav-item.show {
+  transform: translate3d(0, 0, 0);
+}
+
+.nav-item {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  transition: var(--easeOut);
+  transform: translate3d(600px, 0, 0);
+}
+
+.nav-item:first-child {
+  transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.nav-item:last-child {
+  transition-delay: 0.4s;
+}
+
+a:hover {
+  color: #264e94;
+  transition: var(--easeOut);
+}

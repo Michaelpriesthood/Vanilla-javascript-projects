@@ -1,0 +1,87 @@
+:root {
+  --primary-color: rgb(13, 110, 139);
+  --secondary-color: rgba(24, 39, 51, 0.85);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-color);  
+  font-family: 'Lobster Two', sans-serif;
+  overflow: hidden;
+}
+
+/* Menu Button */
+.menu-btn {
+  position: absolute;
+  left: 250px;
+  top: 10%;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.btn-line {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-bottom: 5px;
+}
+
+/* Rotate Into X with the Menu LInes */
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+/* Rotate Line 1 */
+.menu-btn.close .btn-line:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+/* Hide Line 2 */
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+/* Rotate Line 3 */
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Menu Nav*/
+.menu {
+  position: fixed;
+  background: var(--secondary-color);
+  width: 0;
+  height: 100vh;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.menu-nav {
+  list-style-type: none;
+  margin: 20px 0 0 10px;
+}
+
+.nav-item {
+  margin-bottom: 50px;
+}
+
+a {
+  display: block;
+  padding: 0.5rem;
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.5s ease-out;
+}
+
+a:hover {
+  background: var(--primary-color);
+  border-radius: 15px;
+}
+
+.menu.show {
+  opacity: 1;
+  width: 250px;
+}

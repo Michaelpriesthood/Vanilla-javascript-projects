@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>My Contacts</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Contacts</h1>
+      </header>
+      <div class="input-group">
+        <div>
+          <input type="text" id="name-input" placeholder="Add names..." /><span><button class="btn" id="btn-add">Add</button></span>
+        </div>
+        <input type="text" id="filterInput" placeholder="Search Names..." />
+      </div>
+
+      <div class="name-container">
+        <ul id="name-collection">
+          <div class="names">
+            <li class="name-list"><a href="#">Anna</a></li>
+            <button class="btn-delete">Delete</button>
+          </div>
+          <div class="names">
+            <li class="name-list"><a href="#">Bob</a></li>
+            <button class="btn-delete">Delete</button>
+          </div>
+          <div class="names">
+            <li class="name-list"><a href="#">Carthy</a></li>
+            <button class="btn-delete">Delete</button>
+          </div>
+          <div class="names">
+            <li class="name-list"><a href="#">Donald</a></li>
+            <button class="btn-delete">Delete</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

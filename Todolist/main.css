@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: 'Lobster Two', cursive;
+}
+
+.container {
+  width: 70%;
+  margin: 50px auto 0;
+}
+
+h1 {
+  margin: 0 0 20px 20px;
+  color: #999;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+form input,
+form button {
+  padding: 15px;
+  border: 1px solid #11b5e4;
+  font-size: 18px;
+  font-family: 'Lobster Two', cursive;
+}
+
+form input {
+  border-radius: 10px 0 0 10px;
+  width: 70%;
+}
+
+form button {
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+form button:hover {
+  background: #11b5e4;
+  color: #fff;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+ul.todo-list {
+  list-style-type: none;
+  min-width: 30%;
+}
+
+.todos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  background: #999;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.todo-items {
+  flex: 1;
+}
+
+.completed-btn,
+.delete-btn {
+  padding: 0.6rem;
+  cursor: pointer;
+  background: rgb(207, 204, 204);
+  transition: background 0.5s ease;
+}
+
+.completed-btn {
+  border: 1px solid green;
+  border-radius: 10px 0 0 10px;
+  color: green;
+}
+
+.delete-btn {
+  border: 1px solid #d62828;
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+  color: #d62828;
+}
+
+.completed-btn:hover {
+  background: green;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #d62828;
+  color: #fff;
+}
+
+.fa-times,
+.fa-check {
+  pointer-events: none;
+}
+
+.todos-completed {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.fade-out {
+  transform: translateX(8rem) rotateX(120deg);
+  opacity: 0;
+}
